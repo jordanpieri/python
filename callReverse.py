@@ -1,0 +1,1 @@
+C:\Users\o501506\IdeaProjects\pythonLearning\venv\Scripts\python.exe C:\JPMC\DEV\TMP\ds\data\idea\config\IntelliJIdea2023.2\scratches\scratch.py reverse("testing")

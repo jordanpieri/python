@@ -1,0 +1,178 @@
+{
+  "source": "SERVICENOW",
+  "type": "INCIDENT",
+  "name": "PM Team Incident Extract Jordan",
+  "desc": "Active Incident and Task Combined Extract Lists",
+  "ownership": "PRIVATE",
+  "timeZone": "America/Chicago",
+  "filter": {
+    "and": [
+      {
+        "in": {
+          "CI.Configuration_Item": [
+            "GBP Deployment 1",
+            "GBP 1.0 - Pay in 4"
+          ]
+        }
+      },
+      {
+        "in": {
+          "CI.State": [
+            "Handover",
+            "In Progress",
+            "New",
+            "On Hold",
+            "Reassigned"
+          ]
+        }
+      },
+      {
+        "in": {
+          "CI.Assignment_Group": [
+            "CCB_GBP_SENG_GBP: Technician",
+            "CCB_GBP_ASUP_CBGBP: Technician",
+            "CCB_GBP_SSRE_GBPSRE: Technician"
+          ]
+        }
+      }
+    ]
+  },
+  "migrated": false,
+  "resources": [
+    {
+      "name": "CgsIncident",
+      "alias": "CI",
+      "columnSelect": [
+        "Incident_Number",
+        "Short_Description",
+        "State",
+        "Assignment_Group",
+        "opened_time_est",
+        "Assigned_To",
+        "Category",
+        "Subcategory"
+      ]
+    },
+    {
+      "name": "CgsIncidentTask",
+      "alias": "INCT",
+      "columnSelect": [
+        "incident_task_number",
+        "state",
+        "assigned_to_name",
+        "assignment_group",
+        "short_description",
+        "description"
+      ]
+    }
+  ],
+  "resourceOrder": [
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "Incident Number",
+      "entityFieldName": "Incident_Number",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    },
+    {
+      "entityAlias": "INCT",
+      "entityFieldLabel": "Incident Task Number",
+      "entityFieldName": "incident_task_number",
+      "entityLabel": "Incident Task",
+      "entityName": "CgsIncidentTask"
+    },
+    {
+      "entityAlias": "INCT",
+      "entityFieldLabel": "State",
+      "entityFieldName": "state",
+      "entityLabel": "Incident Task",
+      "entityName": "CgsIncidentTask"
+    },
+    {
+      "entityAlias": "INCT",
+      "entityFieldLabel": "Assigned To Name",
+      "entityFieldName": "assigned_to_name",
+      "entityLabel": "Incident Task",
+      "entityName": "CgsIncidentTask"
+    },
+    {
+      "entityAlias": "INCT",
+      "entityFieldLabel": "Assignment Group",
+      "entityFieldName": "assignment_group",
+      "entityLabel": "Incident Task",
+      "entityName": "CgsIncidentTask"
+    },
+    {
+      "entityAlias": "INCT",
+      "entityFieldLabel": "Short Description",
+      "entityFieldName": "short_description",
+      "entityLabel": "Incident Task",
+      "entityName": "CgsIncidentTask"
+    },
+    {
+      "entityAlias": "INCT",
+      "entityFieldLabel": "Description",
+      "entityFieldName": "description",
+      "entityLabel": "Incident Task",
+      "entityName": "CgsIncidentTask"
+    },
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "Short Description",
+      "entityFieldName": "Short_Description",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    },
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "State",
+      "entityFieldName": "State",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    },
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "Assignment Group",
+      "entityFieldName": "Assignment_Group",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    },
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "Opened Time EST",
+      "entityFieldName": "opened_time_est",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    },
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "Assigned To",
+      "entityFieldName": "Assigned_To",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    },
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "Category",
+      "entityFieldName": "Category",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    },
+    {
+      "entityAlias": "CI",
+      "entityFieldLabel": "Subcategory",
+      "entityFieldName": "Subcategory",
+      "entityLabel": "Incident",
+      "entityName": "CgsIncident"
+    }
+  ],
+  "entityType": "M",
+  "shared_sid_list": [],
+  "shared_dest_list": [],
+  "driverResource": null,
+  "relation": null,
+  "isPredefined": false,
+  "extractMode": null,
+  "reportPageView": null,
+  "schedule": {}
+}
