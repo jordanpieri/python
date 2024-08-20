@@ -37,7 +37,7 @@ def make_list_of_free_fields(board):
         for col in range(3): # iterate through columns
             if board[row][col] not in ['O','X']: # is the cell free?
                 free.append((row,col)) # yes, it is - append new tuple to the list
-    print(free)
+    #print(free)
     return free
 
 
@@ -73,9 +73,9 @@ def draw_move(board):
 
 
 board = [ [3 * j + i + 1 for i in range(3)] for j in range(3) ]
-print(board)
+#print(board)
 board[1][1] = 'X' # set first 'X' in the middle
-print(board)
+#print(board)
 free = make_list_of_free_fields(board)
 human_turn = True # which turn is it now?
 while len(free):

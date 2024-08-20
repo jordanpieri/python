@@ -1045,14 +1045,77 @@
 # print(colors_dictionary)
 
 
-colors = {
-    "white": (255, 255, 255),
-    "grey": (128, 128, 128),
-    "red": (255, 0, 0),
-    "green": (0, 128, 0)
-}
+# colors = {
+#     "white": (255, 255, 255),
+#     "grey": (128, 128, 128),
+#     "red": (255, 0, 0),
+#     "green": (0, 128, 0)
+# }
+#
+# for col, rgb in colors.items():
+#     print(col, ":", rgb)
+#
+# print(colors)
 
-for col, rgb in colors.items():
-    print(col, ":", rgb)
 
-print(colors)
+# value = input("Enter a value: ")
+# print(10/value)
+
+# 4.8 Module 4 Completion – Module Test
+# # Question 7
+# # What code would you insert instead of the comment to obtain the expected output?
+#
+# dictionary = {}
+# my_list = ['a', 'b', 'c', 'd']
+#
+# for i in range(len(my_list) - 1):
+#     dictionary[my_list[i]] = (my_list[i], )
+#
+# for i in sorted(dictionary.keys()):
+#     k = dictionary[i]
+#     #print(k) # output ('a',)('b',)('c',), this was the incorrect answer i picked
+#     print(k[0]) # correct answer
+
+# # Question 14
+# # What is the output of the following snippet?
+#
+# def any():
+#     print(var + 1, end='')
+#
+# var = 1
+# any()
+# print(var)
+#
+# #answer is 21, i thought 11
+
+
+# # Question 8
+# def func(a, b):
+#     return a ** a
+#
+#
+# print(func(2))
+
+# # Question 12
+# def fun(x):
+#     if x % 2 == 0:
+#         return 1
+#     else:
+#         return
+#
+#
+# print(fun(fun(2)) + 1) # TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+# print(fun(2) + 1) # outputs 2
+
+# Question 19
+# What is the output of the following code?
+dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
+v = dictionary['one']
+
+for k in range(len(dictionary)):
+    v = dictionary[v]
+
+print(v) # outputs 'two' and i have no idea why
+
+
+
