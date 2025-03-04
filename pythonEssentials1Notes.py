@@ -563,6 +563,40 @@
 
 # I got a 65% on my first try of this assessment
 
+# # 3.8. Module 3 Completion – Module Test - 1/13/2025
+# # Question 18
+# # How many elements does the my_list list contain?
+# my_list = [i for i in range(-1, 2)]
+# print(my_list) # answer is 3
+
+# # Question 19
+# # What is the output of the following snippet?
+# t = [[3-i for i in range (3)] for j in range (3)]
+# s = 0
+# for i in range(3):
+#     print(t)
+#     s += t[i][i]
+# print(s) # answer is 6
+
+# # Question 20
+# # What is the output of the following snippet?
+# my_list = [[0, 1, 2, 3] for i in range(2)]
+# print(my_list[2][0]) #causes an error
+
+
+# # Question 5
+# # How many hashes (#) will the following snippet send to the console? # Answer: 2
+# for i in range(1):
+#     print("#")
+# else:
+#     print("#")
+# # Explanation
+# for i in range(1):
+#     print("#", i,"in range")
+# else:
+#     print("#", i, "else")
+
+
 # # 4.3.1 Effects and results: the return instruction
 # def happy_new_year(wishes = True):
 #     print("Three...")
@@ -870,7 +904,6 @@
 #     else:
 #         print(word, "is not in dictionary")
 
-
 # 4.6.4 Dictionary methods and functions
 # dictionary = {
 #     "horse": "cheval"             ,
@@ -1107,15 +1140,139 @@
 # print(fun(fun(2)) + 1) # TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
 # print(fun(2) + 1) # outputs 2
 
-# Question 19
-# What is the output of the following code?
-dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
-v = dictionary['one']
+# # Question 19
+# # What is the output of the following code?
+# dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
+# v = dictionary['one']
+#
+# for k in range(len(dictionary)):
+#     v = dictionary[v]
+#
+# print(v) # outputs 'two' and i have no idea why
 
-for k in range(len(dictionary)):
-    v = dictionary[v]
+# # # Final Test
+# # Question 1
+# # What is the output of the following snippet? # my answer was [1, 2, 1, 2], correct answer is [1, 1, 1, 2]
+# my_list = [1, 2]
+#
+# for v in range(2):
+#     my_list.insert(-1, my_list[v])
+#
+# print(my_list)
 
-print(v) # outputs 'two' and i have no idea why
+# # Question 10
+# # What is the output of the following snippet? # my answer [0, 1, 4, 16], correct answer was [0, 1, 4, 9]
+#
+# my_list =  [x * x for x in range(5)]
+# print(my_list)
+#
+# def fun(lst):
+#     print(lst[lst[2]])
+#     print(lst[4])
+#     del lst[lst[2]]
+#     return lst
+#
+#
+# print(fun(my_list))
+
+# # Question 11
+# # What is the output of the following piece of code? # My answer: 2 1 2 Correct answer: 1 1 2
+# x = 1
+# y = 2
+# x, y, z = x, x, y
+# z, y, z = x, y, z
+#
+# print(x, y, z)
+#
+# # Question 12
+# # What will be the output of the following snippet? # My answer: 1 0 Correct answer 0 1
+#
+# a = 1
+# b = 0
+# a = a ^ b
+# b = a ^ b
+# a = a ^ b
+#
+# print(a, b)
+#
+# # Question 21
+# # What is the output of the following snippet? i answered three should have been one
+# dct = {'one': 'two', 'three': 'one', 'two': 'three'}
+# v = dct['three']
+#
+# for k in range(len(dct)):
+#     v = dct[v]
+#
+# print(v)
+
+
+# # Question 22
+# # How many elements does the lst list contain? i answered one but it was none
+# lst = [i for i in range(-1, -2)]
+#
+# print(lst)
+
+# # Question 26
+# # What is the output of the following snippet? wrong (4,). right 4
+#
+# tup = (1, 2, 4, 8)
+# tup = tup[-2:-1]
+# tup = tup[-1]
+# print(tup)
+#
+# Question 27
+# What is the output of the following snippet? wrong 0 1. right "the code is erroneous (the dict object has no vals() method)"
+# dd = {"1": "0", "0": "1"}
+# for x in dd.vals():
+#     print(x, end="")
+#
+# # Question 30
+# # How many hashes (#) will the following snippet send to the console? wrong 6, correct 3
+# lst = [[x for x in range(3)] for y in range(3)]
+# print(lst)
+# for r in range(3):
+#     for c in range(3):
+#         if lst[r][c] % 2 != 0:
+#             print("#")
+
+# # Question 31
+# # What is the output of the following code if the user enters a 0? wrong "Very bad input..." correct 0.0
+#
+# try:
+#     value = input("Enter a value: ")
+#     print(int(value)/len(value))
+# except ValueError:
+#     print("Bad input...")
+# except ZeroDivisionError:
+#     print("Very bad input...")
+# except TypeError:
+#     print("Very very bad input...")
+# except:
+#     print("Booo!")
+
+# # Question 32
+# # What is the expected behavior of the following program? wrong "The program will cause a ZeroDivisionError exception and output the following message: Too bad..." correct "The program will cause a SyntaxError exception."
+# try:
+#     print(5/0)
+#     break
+# except:
+#     print("Sorry, something went wrong...")
+# except (ValueError, ZeroDivisionError):
+#     print("Too bad...")
+
+
+# # Question 33
+# # What is the expected behavior of the following program? wrong "The program will cause an AttributeError exception." correct "The program will cause a ValueError exception."
+#
+# foo = (1, 2, 3)
+# foo.index(0)
+
+# # Question 35
+# # What will happen when you attempt to run the following code? wrong "The code will raise the ValueError exception." right "The code will raise the SyntaxError exception."
+# print(Hello, World!)
+
+# List1 = [10,20,30,40,50]
+# List1[2:16]
 
 
 
