@@ -395,3 +395,8 @@ if __name__ == '__main__':
     import doctest
     #doctest.testmod(optionflags=doctest.IGNORE_EXCEPTION_DETAIL, verbose=True) # Shows all test output
     doctest.testmod(optionflags=doctest.IGNORE_EXCEPTION_DETAIL, verbose=False) # Runs test and only gives errors
+
+
+
+
+
